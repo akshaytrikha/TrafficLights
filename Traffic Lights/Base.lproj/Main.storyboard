@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Traffic_Lights" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Road" translatesAutoresizingMaskIntoConstraints="NO" id="oqe-JU-93O">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TrafficLight" translatesAutoresizingMaskIntoConstraints="NO" id="m45-Dn-wOK">
+                                <rect key="frame" x="74" y="59" width="226.5" height="294"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="m45-Dn-wOK" secondAttribute="height" multiplier="226:293" id="MKV-za-cS1"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VO4-20-pAh">
+                                <rect key="frame" x="95" y="453" width="185" height="185"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="VO4-20-pAh" secondAttribute="height" multiplier="1:1" id="EdI-2l-QP8"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="25"/>
+                                <state key="normal" title="Start" backgroundImage="redButton">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="startStop:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wr3-NT-gU2"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ewr-WB-DSf">
+                                <rect key="frame" x="29" y="367" width="316.5" height="78"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="40"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="oqe-JU-93O" secondAttribute="bottom" id="3ZK-0Q-KGJ"/>
+                            <constraint firstItem="oqe-JU-93O" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="7wg-36-eLD"/>
+                            <constraint firstItem="VO4-20-pAh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="79" id="Cct-gs-tim"/>
+                            <constraint firstItem="m45-Dn-wOK" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="39" id="IPd-Fg-CU7"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="m45-Dn-wOK" secondAttribute="trailing" constant="58.5" id="Mqd-Xy-SQN"/>
+                            <constraint firstAttribute="trailing" secondItem="oqe-JU-93O" secondAttribute="trailing" id="NGM-vg-BRV"/>
+                            <constraint firstItem="Ewr-WB-DSf" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="13.5" id="RTS-WR-7r3"/>
+                            <constraint firstItem="oqe-JU-93O" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="ZmP-10-1LL"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="VO4-20-pAh" secondAttribute="bottom" constant="29" id="hjS-sD-KnU"/>
+                            <constraint firstItem="Ewr-WB-DSf" firstAttribute="top" secondItem="m45-Dn-wOK" secondAttribute="bottom" constant="14" id="i3F-5j-Q5J"/>
+                            <constraint firstItem="VO4-20-pAh" firstAttribute="top" secondItem="Ewr-WB-DSf" secondAttribute="bottom" constant="8" id="jpe-fq-d5V"/>
+                            <constraint firstItem="m45-Dn-wOK" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="58.5" id="ofk-gR-vwA"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Ewr-WB-DSf" secondAttribute="trailing" constant="13.5" id="tda-LU-f8u"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="VO4-20-pAh" secondAttribute="trailing" constant="79" id="x36-SP-l9m"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="label" destination="Ewr-WB-DSf" id="hu5-VT-vx3"/>
+                        <outlet property="startStopButton" destination="VO4-20-pAh" id="Knn-XE-m69"/>
+                        <outlet property="trafficLight" destination="m45-Dn-wOK" id="jZw-4q-Sft"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Road" width="1674" height="1902"/>
+        <image name="TrafficLight" width="550" height="900"/>
+        <image name="redButton" width="1353" height="1353"/>
+    </resources>
+</document>
